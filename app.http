@@ -1,0 +1,36 @@
+### Get All Dates
+GET http://localhost:1234/dates/
+
+### Get by id
+GET http://localhost:1234/dates/1
+
+### Get by date
+GET http://localhost:1234/dates/filter
+Content-Type: application/json
+
+{ 
+    "duracion": "1h",
+    "especialidad": "Dermatologia"
+}
+
+### Create Date
+POST http://localhost:1234/dates/
+Content-Type: application/json
+
+{ 
+    "nombre_medico": "Camilo Medico", 
+    "especialidad": "Urologia", 
+    "fecha": "05-14-2024", 
+    "duracion": "2h" 
+}
+
+### Update Date
+PUT http://localhost:1234/dates/1
+Content-Type: application/json
+
+{ 
+    "nombre_medico": "Juan Medico", 
+    "especialidad": "Dermatologia", 
+    "fecha": "04-14-2024", 
+    "duracion": "1h" 
+}
